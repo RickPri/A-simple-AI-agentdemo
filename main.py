@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 load_dotenv()
 api_key = os.getenv('DEEPSEEK_API_KEY')
 model = OpenAIChatModel('deepseek-chat',
-                        provider=DeepSeekProvider(api_key='sk-ae11155b03524ae88397360fc83caa5b'))
+                        provider=DeepSeekProvider(api_key=''))
 
 agent = Agent(model,
               tools= [tools.read_files,tools.list_files,tools.rename_files]
